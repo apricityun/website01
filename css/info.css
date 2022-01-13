@@ -1,0 +1,42 @@
+.imfo {
+    display : flex;
+    flex-flow : column wrap;
+}
+
+.friend_list01 {
+    list-style-type : none;
+    margin : 0px;
+    padding : 0px;
+    display : flex;
+    flex-flow : row wrap;  
+    justify-content : center;
+}
+
+.info_list li {
+    text-align : center;
+    line-height : 35px;
+    margin : 0px 8px 8px 0px;
+}
+
+.friend_list01 > li > a {
+    display : inline-block;
+    width : 150px;
+    height : 35px;
+}
+
+.friend_list01 > li > a:link {
+    text-decoration : none;
+}
+
+.friend_list01 > li > a:hover {
+    background-color : #041434;
+    color : white;
+}
+
+article {
+    display : flex;
+    flex-flow : row wrap;
+    justify-content : space-around;
+}
+
+

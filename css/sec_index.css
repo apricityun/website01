@@ -1,0 +1,134 @@
+#main {
+    background-color : white;
+    display : flex;
+    flex-direction : column;
+    flex-wrap : wrap;
+    justify-content : space-evenly;
+    padding : 0px;
+    height : 635px;
+}
+
+.main_top {
+    background-image : url(../source/scene03.jpg);
+    height :350px;
+    display : flex;
+    flex-direction : row;
+    box-shadow: 0 0 10px #4d5350;
+}
+
+.main_text {
+    width : 350px;
+    flex-grow : 1;
+    font-size : 20px;
+}
+
+.main_text p {
+    font-size : 20px;
+    color : white;
+    text-shadow : 5px 5px 10px #050706;
+    font-style : italic;
+    padding : 10px 0px 0px 30px;
+}
+
+.main_img {
+    flex-grow : 2;
+    text-align : center;
+}
+
+.main_img figure {
+    height : 350px;
+    margin : 0px;
+    text-align : right;
+}
+
+.main_img figure img {
+    height : 100%;
+    vertical-align : bottom;
+    position : relative;
+    animation : imgmove 5s ease-in-out 1.5s infinite alternate running;
+}
+
+@keyframes imgmove{
+    from{
+        right : 0px;
+        opacity : 0;}
+    to{ 
+        right : 200px;
+        opacity : 1;}
+}
+
+
+/*메인 영역 하단부*/
+.main_sub {
+    height : 240px;
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-between;
+}
+
+.main_sub_notice, .main_sub_tip  {
+    padding-left : 5px;
+}
+
+.main_sub_notice {
+    width : 320px;
+}
+
+.main_sub_tip {
+    width : 290px;
+}
+
+.notice_list, .tip_list {
+    list-style-type : none;
+    padding : 0px 15px;
+}
+
+.notice_list > li, .tip_list > li {
+    margin : 5px 0px;
+}
+
+.notice_list a:link, .tip_list a:link{
+    text-decoration : none;
+}
+
+
+/* 하단부 가운데 */
+.main_sub h3 {
+    margin : 5px 5px 10px 5px;
+    padding-bottom : 5px;
+    border-bottom : 1px solid #050706;
+}
+.main_sub_coordi {
+    width : 535px;
+    height : 240px;
+}
+
+.list_box {
+    display : flex;
+    flex-flow : row wrap;
+    justify-content : space-around;
+    align-items : center;
+}
+.list_box a:link {
+    text-decoration : none;
+}
+
+.notice_list a:hover, .list_box a:hover, .tip_list a:hover {
+    opacity : 60%;
+    font-weight : bolder;
+}
+
+.list_box figure {
+    margin : 5px 7px;
+    width : 140px;
+    height : 160px;
+    text-align : center;
+}
+
+.list_box img {
+    height : 100%;
+}
+
+
+

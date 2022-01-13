@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Site - Login</title>
+    <link type="text/css" rel="stylesheet" href="../css/basic.css">
+    <link type="text/css" rel="stylesheet" href="../css/sec_common_detail.css">
+    <link type="text/css" rel="stylesheet" href="../css/members.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="top">
+                <div class="top_logo">
+                    <a href="../index.html">
+                        <img src="../source/logo.png" alt="logoiamage" title="onclick, comeback index page">
+                    </a>
+                </div>
+                <div class="top_login_join">
+                    <a href="./login.html" target="_self">Login</a>
+                    <a href="./join.html" target="_self">Join</a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu_left"></div>
+                <ul id="menu">
+                    <li><a href="../board/info.html" target="_self">Info</a></li>
+                    <li><a href="../board/notice.html" target="_self">Notice</a></li>
+                    <li><a href="../board/general.html" target="_self">General</a></li>
+                    <li><a href="../board/coordi.html" target="_self">Coordi</a></li>
+                    <li><a href="../board/tip.html" target="_self">Tip</a></li>
+                    <li><a href="../board/error.html" target="_self">Error</a></li>
+                </ul>
+                <div class="menu_right"></div>
+            </nav>
+        </header>
+        <section>
+            <div class="com_sec">
+                <div class="com_sec_title">
+                    <h1>Login</h1>
+                </div>
+                <div class="com_sec_content">
+                    <div id="login">
+                        <p>아직 회원이 아니시라면, <a class="to_join" href="./join.html" target="">회원가입</a></p>
+                        <form action="" name ="login_area" method="get">
+                            <table class="login_box">
+                                <tr>
+                                    <td>ID</td>
+                                    <td><input class="login_box_id" type="text" name="user_id" required></td>
+                                    <td rowspan="2">
+                                        <button type="button" name="login_btn" class="login_btn" onclick="checkFormLogin()">LOGIN</button></td>
+                                </tr>
+                                <tr>
+                                    <td>PASSWORD</td>
+                                    <td><input class="login_box_pw" type="password" name="user_pw" required></td>
+                                </tr>
+                            </table>
+                        </form>
+                        <p ><a class="to-id-sch" href="" target="_blank">아이디 찾기 </a> | <a class="to-pw-sch" href="" target="_blank">비밀번호 찾기</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <a href="https://play.google.com/store/apps/details?id=com.kakaogames.myhome" target="_blank">GooglePaly</a>
+            <a href="https://appsto.re/kr/paANdb.i" target="_blank">Appstore</a>
+            <a href="https://cafe.naver.com/myhomeforkakao" target="_blank">NAVERcafe</a>
+            <a href="https://www.instagram.com/myhomeforkakao/?hl=ko" target="_blank">Instagram</a>
+        </aside>
+        <footer>
+            <p>Copyrightⓒ soyun. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function checkFormLogin(){
+            if(login_area.user_id.value.length == 0){
+                alert('ID를 입력해주세요!');
+                login_area.user_id.focus();
+                return;
+            }
+            login_area.user_pw.focus();
+            if(login_area.user_pw.value.length == 0){
+                alert('비밀번호를 입력해주세요!');
+                login_area.user_pw.focus();
+                return;
+            }
+            login_area.submit();
+        }
+    </script>
+</body>
+</html>

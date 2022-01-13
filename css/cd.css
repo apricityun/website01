@@ -1,0 +1,38 @@
+.board_list01 {
+    text-align : center;
+}
+
+img {
+    object-fit : contain;
+}
+
+.board_list01 table a {
+    text-decoration : none;
+}
+
+.board_list01 td {
+    width : 280px;
+    height : 210px;
+    padding : 0px;
+
+}
+.board_list01 figure {
+    width : 240px;;
+    height : 180px;
+    margin : 0px 0px 10px 15px; 
+}
+
+.board_list01 figure:hover {
+    opacity : 0.6;
+}
+
+.board_list01 figcaption {
+    font-size : 18px;
+    font-weight : bold;
+}
+
+.board_list01 td img {
+    height : 100%;
+    width : auto;
+}
+

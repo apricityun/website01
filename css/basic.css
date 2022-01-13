@@ -1,0 +1,174 @@
+* { 
+    font-family: sans-serif;
+    color : #041435;
+}
+
+div.container {
+    display : flex;
+    flex-direction : column;
+    width : 1200px;
+    margin : 0 auto;
+    flex-wrap : wrap;
+    justify-content : space-between;
+    box-shadow: 1px 1px 10px #050706;
+}
+
+
+/* 헤더 */
+header { 
+    height : 180px;
+    background-color : #0D47A1;
+    display : flex;
+    flex-direction : column;
+    flex : wrap;
+    justify-content : flex-end;
+}
+
+#top {
+    background-image : url(../source/top_bg_img_02.png);
+    background-repeat : no-repeat;
+    background-position : bottom;
+    height : 150px;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+}
+
+
+/* 로고 */
+.top_logo > a > img {
+    width:200px; height:130px;
+    margin-top : 10px;
+    object-fit : contain;
+}
+
+
+/* 로그인 & 가입 */
+.top_login_join {
+    width : 200px;
+    text-align : right;
+}
+
+.top_login_join > a {
+    display : inline-block;
+    width : 95px;
+    height : 30px;
+    line-height : 35px;
+    text-align : center;
+    color : white;
+}
+
+.top_login_join > a:link {
+    text-decoration : none;
+}
+
+.top_login_join > a:hover {
+    color : #DF8620;
+}
+
+.top_login_join > a:visited {
+    color : none;
+}
+
+nav {
+    height : 35px;
+    padding : 0px center;
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+}
+
+#menu {
+    list-style-type: none;
+    display : flex;
+    flex-direction : row;
+    padding : 0px;
+    margin : 0px auto;  
+}
+
+#menu > ul {
+    flex-grow : 4;
+}
+
+.menu_left, .menu_right {
+    flex-grow: 1;
+}
+
+#menu > li {
+    text-align : center;
+    width : 130px;
+    height : 35px;
+    line-height : 35px;
+}
+
+#menu > li > a {
+   background-color : #041435;
+   display : inline-block;
+   width : 130px;
+   flex-grow : 1;
+   color:white;
+}
+
+#menu > li > a:link {
+    text-decoration : none;
+}
+
+#menu > li > a:visited {
+    color : white;
+}
+
+#menu > li > a:hover {
+    background-color : #FFF7C6;
+    color : #041435;
+    font-weight : bold;
+}
+
+.menu_left {
+    background : linear-gradient(90deg, #050706, #041435);
+}
+
+.menu_right {
+    background : linear-gradient(270deg, #050706, #041435);
+}
+
+
+/* 섹션 */
+section {
+    height : 635px;
+}
+
+
+/* 어사이드 */
+aside {
+    border-top : 1px solid #d1d0ba;
+    height : 50px;
+    line-height : 50px;
+}
+
+aside > a {
+    margin-left : 20px;
+    font-size : 20px;
+    font-weight : bold;
+}
+
+aside > a:link {
+    text-decoration : none;
+}
+
+aside > a:hover {
+    color : #DF8620;
+}
+
+
+/* 푸터 */
+footer {
+    border-top : 1px solid #f8f8f4;
+    height : 40px;
+    line-height : 40px;
+}
+
+footer > p {
+    padding-left : 15px;
+    margin : 0px;
+    font-size : 12px;
+}

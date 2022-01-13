@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Site - Join</title>
+    <link type="text/css" rel="stylesheet" href="../css/basic.css">
+    <link type="text/css" rel="stylesheet" href="../css/sec_common_detail.css">
+    <link type="text/css" rel="stylesheet" href="../css/members.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="top">
+                <div class="top_logo">
+                    <a href="../index.html">
+                        <img src="../source/logo.png" alt="logoiamage" title="onclick, comeback index page">
+                    </a>
+                </div>
+                <div class="top_login_join">
+                    <a href="./login.html" target="_self">Login</a>
+                    <a href="./join.html" target="_self">Join</a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu_left"></div>
+                <ul id="menu">
+                    <li><a href="../board/info.html" target="_self">Info</a></li>
+                    <li><a href="../board/notice.html" target="_self">Notice</a></li>
+                    <li><a href="../board/general.html" target="_self">General</a></li>
+                    <li><a href="../board/coordi.html" target="_self">Coordi</a></li>
+                    <li><a href="../board/tip.html" target="_self">Tip</a></li>
+                    <li><a href="../board/error.html" target="_self">Error</a></li>
+                </ul>
+                <div class="menu_right"></div>
+            </nav>
+        </header>
+        <section>
+            <div class="com_sec">
+                <div class="com_sec_title">
+                    <h1>Join</h1>
+                </div>
+                <div class="com_sec_content">
+                    <div id="join">
+                        <form name="join_info" action="" method="get">
+                            <div class="join_box">
+                                <fieldset class="join_basic">
+                                    <legend>✔ 필수 입력 정보</legend>
+                                    <table>
+                                        <tr>
+                                            <td class="join-le">아이디</td>
+                                            <td><input class="join_box_s1" type="text" name="user_id" placeholder="아이디는 4 ~ 18자 이내" required></td>
+                                            <td><button class="join_box_s5" type="button" name="dup_check" onclick="">ID 중복확인</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">비밀번호</td>
+                                            <td><input class="join_box_s1" type="password" name="user_pw" placeholder="비밀번호는 6 ~ 20자 이내" required></td>
+                                            <td rowspand="4"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">비밀번호 확인</td>
+                                            <td><input class="join_box_s1" type="password" name="user_pw_dup" placeholder="입력한 비밀번호를 똑같이 입력" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">이름</td>
+                                            <td><input class="join_box_s1" type="text" name="user_name" placeholder="본명" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">닉네임</td>
+                                            <td><input class="join_box_s1" type="text" name="user_nick" placeholder="커뮤니티 사용 닉네임 2 ~ 8자 내외" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">이메일</td>
+                                            <td colspan="2"><input class="join_box_s1" type="text" name="user_mail_id" placeholder="" required>
+                                                <select  class="join_box_s3" name="email_address">
+                                                    <option value="0">메일을 선택해주세요.</option>
+                                                    <option value="google">@gmail.com</option>
+                                                    <option value="naver">@naver.com</option>
+                                                    <option value="daum">@hanmail.net</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">이메일 수신 동의</td>
+                                            <td colspan="2">
+                                                <label><input class="join_box_s2" type="radio" name="email_agree" value="agree">수신 동의</label>
+                                                <label><input class="join_box_s2" type="radio" name="email_agree" value="disagree">수신 거부</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <fieldset class="join_optional">
+                                    <legend>✔ 선택 입력 정보</legend>
+                                    <table>
+                                        <tr>
+                                            <td class="join-le">게임 닉네임</td>
+                                            <td><input class="join_box_s1" type="text" placehoder="게임 내 닉네임"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">성별</td>
+                                            <td>
+                                                <label><input class="join_box_s2" type="radio" name="sex" value="male">남자</label>
+                                                <label><input class="join_box_s2" type="radio" name="sex" value="female">여자</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">연령</td>
+                                            <td><input class="join_box_s1" type="date"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">휴대폰 번호</td>
+                                            <td>
+                                                <select class="join_box_s4" name="phone_id">
+                                                    <option value="1">010</option>
+                                                    <option value="2">011</option>
+                                                    <option value="3">016</option>
+                                                    <option value="4">017</option>
+                                                    <option value="5">018</option>
+                                                    <option value="6">019</option>
+                                                </select>
+                                                <input class="join_box_s1" type="tel" name="phone_num" placehodler="1234-5678">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="join-le">모바일 운영체제</td>
+                                            <td>
+                                                <label><input class="join_box_s2" type="radio" name="os" value="1">Android</label>
+                                                <label><input class="join_box_s2" type="radio" name="os" value="2">iOS</label>
+                                                <label><input class="join_box_s2" type="radio" name="os" value="3">그 외</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <span class="join_box_btn">
+                                        <button class="join_box_s6" type="button" onclick="checkFormJoin()">가입하기</button>
+                                        <button class="join_box_s6" type="reset">입력 초기화</button>
+                                    </span>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <a href="https://play.google.com/store/apps/details?id=com.kakaogames.myhome" target="_blank">GooglePaly</a>
+            <a href="https://appsto.re/kr/paANdb.i" target="_blank">Appstore</a>
+            <a href="https://cafe.naver.com/myhomeforkakao" target="_blank">NAVERcafe</a>
+            <a href="https://www.instagram.com/myhomeforkakao/?hl=ko" target="_blank">Instagram</a>
+        </aside>
+        <footer>
+            <p>Copyrightⓒ soyun. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function checkFormJoin() {
+                let id = join_info.user_id;
+                if(id.value.length == 0) {
+                    alert('원하는 아이디를 입력해주세요.');
+                    id.focus();
+                    return;
+                }
+                if(!(id.value.length >= 4
+                    && id.value.length <= 18)){
+                        alert('영문자, 숫자 조합으로 4 ~ 18자 이내로 입력해주세요.');
+                        id.focus();
+                        return;
+                }
+                let pw = join_info.user_pw;
+                if(pw.value.length == 0){
+                    alert('비밀번호를 입력해주세요.');
+                    pw.focus();
+                    return;
+                }
+                if(!(pw.value.length >= 6 && pw.value.length <= 20)){
+                    alert('6 ~ 20자 내외로 비밀번호를 입력해주세요.');
+                    pw.focus();
+                    return;
+                }
+                let pw2 = join_info.user_pw_dup;
+                if(pw.value !== pw2.value){
+                    alert('비밀번호가 다릅니다. 같은 비밀번호를 입력해주세요.');
+                    pw2.focus();
+                    return;
+                }
+                let uname = join_info.user_name;
+                if(uname.value.length == 0) {
+                    alert('이름을 입력해주세요.');
+                    uname.focus();
+                    return;
+                }
+                let nick = join_info.user_nick;
+                if(nick.value.length == 0){
+                    alert('닉네임을 입력해주세요.');
+                    nick.focus();
+                    return;
+                }
+                if(!(nick.value.length >= 2 && nick.value.length <= 8)) {
+                    alert('닉네임은 2 ~ 8자 사이로 입력해주세요.');
+                    nick.focus();
+                    return;
+                }
+                let eid = join_info.user_mail_id;
+                if(eid.value.length == 0) {
+                    alert('이메일 아이디를 입력해주세요.');
+                    eid.focus();
+                    return;
+                }
+                let adr = join_info.email_address;
+                if(adr.selectedIndex == 0){
+                    alert('이메일 주소를 선택해주세요.');
+                    adr.focus();
+                    return;
+                }
+                let agr = join_info.email_agree;
+                if(agr[0].checked == false && agr[1].checked == false){
+                    alert('메일 수신 동의 여부를 체크해주세요.');
+                    agr.focus();
+                    return;
+                }
+                join_info.submit(); 
+                alert('가입이 완료되었습니다.');               
+            }
+        </script>
+    </div>
+</body>
+</html>

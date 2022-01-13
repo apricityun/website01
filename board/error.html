@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web site - report error</title>
+    <link type="text/css" rel="stylesheet" href="../css/basic.css">
+    <link type="text/css" rel="stylesheet" href="../css/sec_common_detail.css">
+    <link type="text/css" rel="stylesheet" href="../css/err.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="top">
+                <div class="top_logo">
+                    <a href="../index.html">
+                        <img src="../source/logo.png" alt="logoiamage" title="onclick, comeback index page">
+                    </a>
+                </div>
+                <div class="top_login_join">
+                    <a href="../member/login.html" target="_self">Login</a>
+                    <a href="../member/join.html" target="_self">Join</a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu_left"></div>
+                <ul id="menu">
+                    <li><a href="./info.html" target="_self">Info</a></li>
+                    <li><a href="./notice.html" target="_self">Notice</a></li>
+                    <li><a href="./general.html" target="_self">General</a></li>
+                    <li><a href="./coordi.html" target="_self">Coordi</a></li>
+                    <li><a href="./tip.html" target="_self">Tip</a></li>
+                    <li><a href="./error.html" target="_self">Error</a></li>
+                </ul>
+                <div class="menu_right"></div>
+            </nav>
+        </header>
+        <section>
+            <div class="com_sec">
+                <div class="com_sec_title">
+                    <h1>Error</h1>
+                </div>
+                <div class="com_sec_content">
+                    <div class="error">
+                        <form action="" name="report_error" method="get">
+                            <fieldset>
+                                <legend>버그 및 오류 신고 입력 양식</legend>
+                                <table>
+                                    <caption></caption>
+                                    <tr>
+                                        <td class="err-le">닉네임</td>
+                                        <td colspan="2"><input class="err_box_s4" type="text" name="game_nick" placeholder="게임 내 닉네임 입력"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="err-le">휴대폰 기종</td>
+                                        <td>
+                                            <select class="err_box_s2" name="phone_br">
+                                                <option value="0">선택</option>
+                                                <option value="1">SAMSUNG</option>
+                                                <option value="2">APPLE</option>
+                                                <option value="3">ETC</option>
+                                            </select>
+                                            <input class="err_box_s1" type="text" list="phone_list" name="phone_type">
+                                            <datalist id="phone_list">
+                                                <option value="SM-F926N">갤럭시Z폴드3</option>
+                                                <option value="SM-F711N">갤럭시Z플립3</option>
+                                                <option value="SM-G991N">갤럭시S21</option>
+                                                <option value="A2638">아이폰13</option>
+                                                <option value="A2399">아이폰12</option>
+                                                <option value="A2296">아이폰SE2</option>
+                                                <option value="M2102J20SG">샤오미 포코 X3 프로</option>
+                                            </datalist>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="err-le">OS 버전</td>
+                                        <td>
+                                            <label><input class="err_box_s3" type="radio" name="os_type" value="os_type01">안드로이드</label>
+                                            <label><input class="err_box_s3" type="radio" name="os_type" value="os_type02">iOS</label>
+                                            <label><input class="err_box_s3" type="radio" name="os_type" value="os_type03">기타</label>
+                                            <input class="err_box_s5" type="number" name="os_ver" min="1" max="20">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="err-le">오류 발생시간</td>
+                                        <td><input class="err_box_s4" type="datetime-local" name="err_time" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <textarea name="err_text" cols="100" rows="10" placeholder="구체적인 오류 상황을 적어주세요."></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="err_submit_box" colspan="2">
+                                            <button type="reset" class="err_box_s6" >전부 초기화</button>
+                                            <input type="button" class="err_box_s6"name="submit-btn" value="제출" onclick="checkForm()">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <a href="https://play.google.com/store/apps/details?id=com.kakaogames.myhome" target="_blank">GooglePaly</a>
+            <a href="https://appsto.re/kr/paANdb.i" target="_blank">Appstore</a>
+            <a href="https://cafe.naver.com/myhomeforkakao" target="_blank">NAVERcafe</a>
+            <a href="https://www.instagram.com/myhomeforkakao/?hl=ko" target="_blank">Instagram</a>
+        </aside>
+        <footer>
+            <p>Copyrightⓒ soyun. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function checkForm() {
+                if (report_error.game_nick.value.length == 0) {
+                    alert('게임 닉네임을 입력해주세요.');
+                    report_error.game_nick.focus();
+                    return;
+                }
+                if (report_error.phone_br.selectedIndex == 0){
+                    alert('핸드폰 브랜드를 선택해주세요.');
+                    report_error.phone_br.focus();
+                    return;
+                }
+                if (report_error.phone_type.value.length == 0) {
+                    alert('핸드폰 기종을 입력해주세요.');
+                    report_error.phone_type.focus();
+                    return;
+                }
+                if (report_error.os_type[0].checked == false 
+                    && report_error.os_type[1].checked == false
+                    && report_error.os_type[2].checked == false){
+                        alert('핸드폰의 운영체제를 선택해주세요.');
+                        report_error.os_type[0].focus();
+                        return;
+                }
+                if (!(report_error.os_ver.value >= 1 &&  report_error.os_ver.value <=20)) {
+                    alert('핸드폰 운영체제의 버전을 입력해주세요.');
+                    report_error.os_ver.focus();
+                    return;
+                }
+                if (report_error.err_text.value.length == 0) {
+                    alert('오류 내용을 적어주세요.');
+                    report_error.err_text.focus();
+                    return;
+                }
+                report_error.submit();
+                alert('제출이 완료되었습니다.');
+                
+            }//checkForm
+        </script>
+    </div>
+</body>
+</html>

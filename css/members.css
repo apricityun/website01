@@ -1,0 +1,133 @@
+/* login */
+.com_sec_content {
+    height : 500px;
+}
+#login {
+    text-align : center;
+    width : 700px;
+    margin : 75px 0px 0px 0px;
+}
+
+.login_box {
+    font-size : 24px;
+    font-weight : bolder;
+    text-align : right;
+    border-top : 1px solid #041435;
+    border-bottom : 1px solid #041435;
+}
+
+.login_box td {
+    padding : 10px;
+    width : 150px;
+    height : 60px;
+}
+
+.login_box_id, .login_box_pw {
+    width : 300px;
+    height : 35px;
+}
+
+.login_btn {
+    border-color: #d1d0ba;
+    width : 150px;
+    height : 150px;
+    background-color : #041435;
+    color : #f8f8f4;
+    font-weight : bolder;
+    font-size : 26px;
+}
+
+.login_btn:hover{
+    background-color : #f8f8f4;
+    color : #041435;
+}
+
+.to_join:hover,
+.to-id-sch:hover,
+.to-pw-sch:hover {
+    font-weight : bolder;
+    color : #f8f8f4;
+    background-color : #041435;
+}
+
+.to-id-sch, .to-pw-sch {
+    text-decoration : none;
+}
+
+
+/* join */
+.join_box {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+}
+
+.join_box table .join-le {
+    text-align : right;
+    font-weight : bold;
+}
+
+.join_box legend {
+    font-size: 20px;
+    font-weight : bolder;
+    color : black;
+}
+
+
+/*입력창 크기 조절*/
+.join_box_s1 {
+    width : 200px;
+    height : 25px;
+}
+
+.join_box_s2 {
+    width : 25px;
+    height : 15px;
+}
+
+.join_box_s3 {
+    width : 150px;
+    height : 35px;
+}
+
+.join_box_s4 {
+    width : 70px;
+    height : 30px;
+}
+
+.join_box_s5 {
+    width : 100px;
+    height : 30px;
+
+}
+.join_box_s6 {
+    width : 150px;
+    height : 65px;
+}
+
+.join_box_btn {
+    vertical-align : bottom;
+}
+
+.join_optional {
+    display : flex;
+    flex-flow : column wrap;
+    justify-content : space-between;
+}
+
+.join_basic, .join_optional {
+    border : none;
+    margin : 0px;
+}
+
+.join_basic {
+    border-right : 1px solid #d1d0ba;
+    margin-right : 25px;
+}
+
+.join_basic table td, .join_optional table td{
+    padding : 15px 10px;
+    text-align : left;
+    font-size : 18px;
+}
+
